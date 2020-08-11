@@ -3,7 +3,7 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
-let model = select(undefined, 'modal');
+let model = ;
 let heart = select(undefined, undefined, 'like');
 
 
