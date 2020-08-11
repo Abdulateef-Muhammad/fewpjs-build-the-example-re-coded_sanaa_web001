@@ -3,12 +3,12 @@ const EMPTY_HEART = '♡'
 const FULL_HEART = '♥'
 
 // Your JavaScript code goes here!
-let model = ;
+let modal = select(undefined, 'modal');
 let heart = select(undefined, undefined, 'like');
 
 
 document.addEventListener('DOMContentLoaded', function(e) {
-    model.classList.add('hidden');
+    modal.classList.add('hidden');
 
     for (let i = 0; i < heart.length; i++) {
         let heartGlyph = heart[i].querySelector('.like-glyph');
@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', function(e) {
                         heartGlyph.innerText = FULL_HEART;
                     })
                     .catch(function(e) {
-                        model.classList.remove('hidden');
+                        modal.classList.remove('hidden');
                         select(undefined, "modal-message").innerText = e.message;
                         setTimeout(() => {
-                            model.classList.add('hidden');
+                            modal.classList.add('hidden');
                         }, 5000);
                     });
             } else if (heartGlyph.innerText == FULL_HEART) {
